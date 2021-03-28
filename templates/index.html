@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% if session['login'] %}
+        <p>You are currently logged in as {{ session['login']['username'] }}@{{session['login']['ip_address'] }} <br>
+        <a href="/logout" target="_blank" rel="noopener noreferrer">logout</a></p>
+    {% else %}
+        <p><a href="/login" target="_blank" rel="noopener noreferrer">login</a></p>
+    {% endif %}
+
+<p><a href="/helloworld" target="_blank" rel="noopener noreferrer">Hello World</a></p>
+<p><a href="/ls" target="_blank" rel="noopener noreferrer">ls</a></p>
+
+</body>
+</html>
